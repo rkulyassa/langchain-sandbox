@@ -4,9 +4,14 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.2.4"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.42",
+    "dotenv": "^16.4.7",
+    "langchain": "^0.3.19"
   }
 }
