@@ -1,4 +1,4 @@
-# langchain-llm-tutorial
+# langchain-sandbox
 
 To install dependencies:
 
