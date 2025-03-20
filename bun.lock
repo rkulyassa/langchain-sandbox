@@ -6,6 +6,7 @@
       "dependencies": {
         "@langchain/community": "^0.3.34",
         "@langchain/core": "^0.3.42",
+        "@langchain/langgraph": "^0.2.57",
         "@langchain/qdrant": "^0.1.1",
         "dotenv": "^16.4.7",
         "langchain": "^0.3.19",
@@ -36,6 +37,12 @@
 
     "@langchain/core": ["@langchain/core@0.3.42", "", { "dependencies": { "@cfworker/json-schema": "^4.0.2", "ansi-styles": "^5.0.0", "camelcase": "6", "decamelize": "1.2.0", "js-tiktoken": "^1.0.12", "langsmith": ">=0.2.8 <0.4.0", "mustache": "^4.2.0", "p-queue": "^6.6.2", "p-retry": "4", "uuid": "^10.0.0", "zod": "^3.22.4", "zod-to-json-schema": "^3.22.3" } }, "sha512-pT/jC5lqWK3YGDq8dQwgKoa6anqAhMtG1x5JbnrOj9NdaLeBbCKBDQ+/Ykzk3nZ8o+0UMsaXNZo7IVL83VVjHg=="],
 
+    "@langchain/langgraph": ["@langchain/langgraph@0.2.57", "", { "dependencies": { "@langchain/langgraph-checkpoint": "~0.0.16", "@langchain/langgraph-sdk": "~0.0.32", "uuid": "^10.0.0", "zod": "^3.23.8" }, "peerDependencies": { "@langchain/core": ">=0.2.36 <0.3.0 || >=0.3.40 < 0.4.0" } }, "sha512-SolqE+HzwbxEEiqAVgHwE11r9lzjZAnAfEe7MMBUE77TUCaWK3GC0VvDfJMNas53ndlc0KRutmpEa0ODWdhcRQ=="],
+
+    "@langchain/langgraph-checkpoint": ["@langchain/langgraph-checkpoint@0.0.16", "", { "dependencies": { "uuid": "^10.0.0" }, "peerDependencies": { "@langchain/core": ">=0.2.31 <0.4.0" } }, "sha512-B50l7w9o9353drHsdsD01vhQrCJw0eqvYeXid7oKeoj1Yye+qY90r97xuhiflaYCZHM5VEo2oaizs8oknerZsQ=="],
+
+    "@langchain/langgraph-sdk": ["@langchain/langgraph-sdk@0.0.60", "", { "dependencies": { "@types/json-schema": "^7.0.15", "p-queue": "^6.6.2", "p-retry": "4", "uuid": "^9.0.0" }, "peerDependencies": { "@langchain/core": ">=0.2.31 <0.4.0", "react": "^18 || ^19" }, "optionalPeers": ["@langchain/core", "react"] }, "sha512-7ndeAdw1afVY72HpKEGw7AyuDlD7U3e4jxaJflxA+PXaFPiE0d/hQYvlPT84YmvqNzJN605hv7YcrOju2573bQ=="],
+
     "@langchain/openai": ["@langchain/openai@0.4.4", "", { "dependencies": { "js-tiktoken": "^1.0.12", "openai": "^4.77.0", "zod": "^3.22.4", "zod-to-json-schema": "^3.22.3" }, "peerDependencies": { "@langchain/core": ">=0.3.39 <0.4.0" } }, "sha512-UZybJeMd8+UX7Kn47kuFYfqKdBCeBUWNqDtmAr6ZUIMMnlsNIb6MkrEEhGgAEjGCpdT4CU8U/DyyddTz+JayOQ=="],
 
     "@langchain/qdrant": ["@langchain/qdrant@0.1.1", "", { "dependencies": { "@qdrant/js-client-rest": "^1.9.0", "uuid": "^10.0.0" }, "peerDependencies": { "@langchain/core": ">=0.2.21 <0.4.0" } }, "sha512-v0A8wMO6x1XnYKgaXoqWUQAkeOvwcUIQPc1tM5sDTuU3JdQrhZDfuaSg7LJAh0wXJ9Eud7MwpkjYHWUiuE17/A=="],
@@ -55,6 +62,8 @@
     "@types/bun": ["@types/bun@1.2.4", "", { "dependencies": { "bun-types": "1.2.4" } }, "sha512-QtuV5OMR8/rdKJs213iwXDpfVvnskPXY/S0ZiFbsTjQZycuqPbMW8Gf/XhLfwE5njW8sxI2WjISURXPlHypMFA=="],
 
     "@types/debug": ["@types/debug@4.1.12", "", { "dependencies": { "@types/ms": "*" } }, "sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ=="],
+
+    "@types/json-schema": ["@types/json-schema@7.0.15", "", {}, "sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA=="],
 
     "@types/ms": ["@types/ms@2.1.0", "", {}, "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA=="],
 
@@ -311,6 +320,8 @@
     "@browserbasehq/sdk/@types/node": ["@types/node@18.19.80", "", { "dependencies": { "undici-types": "~5.26.4" } }, "sha512-kEWeMwMeIvxYkeg1gTc01awpwLbfMRZXdIhwRcakd/KlK53jmRC26LqcbIt7fnAQTu5GzlnWmzA3H6+l1u6xxQ=="],
 
     "@ibm-cloud/watsonx-ai/@types/node": ["@types/node@18.19.80", "", { "dependencies": { "undici-types": "~5.26.4" } }, "sha512-kEWeMwMeIvxYkeg1gTc01awpwLbfMRZXdIhwRcakd/KlK53jmRC26LqcbIt7fnAQTu5GzlnWmzA3H6+l1u6xxQ=="],
+
+    "@langchain/langgraph-sdk/uuid": ["uuid@9.0.1", "", { "bin": { "uuid": "dist/bin/uuid" } }, "sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA=="],
 
     "@types/node-fetch/form-data": ["form-data@4.0.2", "", { "dependencies": { "asynckit": "^0.4.0", "combined-stream": "^1.0.8", "es-set-tostringtag": "^2.1.0", "mime-types": "^2.1.12" } }, "sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w=="],
 

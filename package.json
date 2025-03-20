@@ -12,6 +12,7 @@
   "dependencies": {
     "@langchain/community": "^0.3.34",
     "@langchain/core": "^0.3.42",
+    "@langchain/langgraph": "^0.2.57",
     "@langchain/qdrant": "^0.1.1",
     "dotenv": "^16.4.7",
     "langchain": "^0.3.19",
