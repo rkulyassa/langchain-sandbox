@@ -53,7 +53,7 @@ const retrieveQA = async (state: typeof StateAnnotationQA.State) => {
   const filter = {
     must: [
       {
-        key: "section",
+        key: "metadata.section",
         match: {
           value: state.search.section,
         },
